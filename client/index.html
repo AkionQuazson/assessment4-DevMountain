@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Back End Assessment</title>
-  </head>
-  <body class="container">
-    <button id="complimentButton">Get a compliment</button>
+	<head>
+		<title>Back End Assessment</title>
+	</head>
+	<body class="container">
+		<div class="card">
+			<p id="complimentOutput"></p>
+			<button id="complimentButton">Get a compliment</button>
+			<form>
+				<input placeholder="New Compliment?"/>
+				<button id="complimentSubmit">Submit New Compliment</button>
+			</form>
+			<div id="complimentList">
+				<!-- Fill this div with compliments from list -->
+			</div>
+		</div>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
-    
-  </body>
+		<div class="card">
+			<p id="fortuneOutput"></p>
+			<button id="fortuneButton">Get a fortune</button>
+			<form>
+				<input placeholder="New Fortune?"/>
+				<button id="fortuneSubmit">Submit New Fortune</button>
+			</form>
+			<div id="fortuneList">
+				<!-- Fill this div with fortunes from list -->
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="main.js"></script>
+		
+	</body>
 </html>
