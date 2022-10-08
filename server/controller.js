@@ -46,9 +46,7 @@ module.exports = {
 		const {id} = req.params;
 		const {compliment} = req.body;
 		
-		const updateIndex = compliments.find((comp) => comp.id === id);
-		const compToUpdate = compliments[updateIndex];
-		
+		const compToUpdate = compliments.find((comp) => comp.id === +id);
 		compToUpdate.text = compliment;
 
 		res.status(200).send(compToUpdate);
@@ -57,8 +55,8 @@ module.exports = {
 	deleteCompliment: (req, res) => {
 		const {id} = req.params;
 		
-		const updateIndex = compliments.find((comp) => comp.id === id);
-		
+		const updateIndex = compliments.findIndex((comp) => comp.id === +id);
+
 		compliments.splice(updateIndex, 1);
 
 		res.status(200).send('deleted');

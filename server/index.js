@@ -22,9 +22,9 @@ app.get("/api/fortune", getFortune);
 
 app.post("/api/compliment", postCompliment);
 
-app.put("/api/compliment", updateCompliment);
+app.put("/api/compliment/:id", updateCompliment);
 
-app.delete("/api/compliment", deleteCompliment);
+app.delete("/api/compliment/:id", deleteCompliment);
 
 app.get("/api/complimentList", getComplimentList);
 
